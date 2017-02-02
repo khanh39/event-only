@@ -1,0 +1,37 @@
+example@form page
+
+    <h1> Job Application </h1>
+
+
+  <%= form_for @job_application do |form_builder| %>
+    <p>
+      <%= form_builder.label :full_name %>
+      <%= form_builder.text_field :full_name %>
+    </p>
+
+
+    <p>
+      <%= form_builder.label :phone %>
+      <%= form_builder.telephone_field :phone %>
+    </p>
+
+
+    <p>
+      <%= form_builder.label :hobby %>
+      <%= form_builder.text_field :hobby %>
+    </p>
+
+    <p>
+      <%= form_builder.label :years_experience %>
+      <%= form_builder.number_field :years_experience %>
+    </p>
+
+      <p>
+      <%= form_builder.label :available_date %>
+      <%= form_builder.date_field :available_date %>
+      </p>
+
+      <p>
+        <%= form_builder.submit "Submit" %>
+      </p>
+      <% end %>
